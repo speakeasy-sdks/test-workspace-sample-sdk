@@ -156,7 +156,7 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.AccountBinding(ctx, operations.AccountBindingRequest{
+    res, err := s.AccountBinding(ctx, operations.AccountBindingRequest{
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.AccountBindingRequestBody{
             AuthCode: testworkspacesamplesdk.String("76a345deaccf47d2ac786c1a3184f987"),
@@ -211,7 +211,7 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.AccountCreation(ctx, operations.AccountCreationRequest{
+    res, err := s.AccountCreation(ctx, operations.AccountCreationRequest{
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.AccountCreationRequestBody{
             Email: testworkspacesamplesdk.String("test_WE_06@email.com"),
@@ -229,7 +229,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.AccountCreation200ApplicationJSONObject != nil {
+    if res.Object != nil {
         // handle response
     }
 }
@@ -268,12 +268,12 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.AuthCaptureWithdraw(ctx, operations.AuthCaptureWithdrawRequest{
+    res, err := s.AuthCaptureWithdraw(ctx, operations.AuthCaptureWithdrawRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.AuthCaptureWithdrawRequestBody{
             AccountToken: testworkspacesamplesdk.String("633ca3e9035441299cca3bd54392b6af"),
-            CaptureAmount: &operations.AuthCaptureWithdrawRequestBodyCaptureAmount{
+            CaptureAmount: &operations.CaptureAmount{
                 Currency: testworkspacesamplesdk.String("IDR"),
                 Value: testworkspacesamplesdk.String("90000.00"),
             },
@@ -332,12 +332,12 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.AuthPaymentWithdraw(ctx, operations.AuthPaymentWithdrawRequest{
+    res, err := s.AuthPaymentWithdraw(ctx, operations.AuthPaymentWithdrawRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.AuthPaymentWithdrawRequestBody{
             AccountToken: testworkspacesamplesdk.String("9f7cfb9e8b744785b0e5a0496dccab48"),
-            Amount: &operations.AuthPaymentWithdrawRequestBodyAmount{
+            Amount: &operations.Amount{
                 Currency: testworkspacesamplesdk.String("IDR"),
                 Value: testworkspacesamplesdk.String("100000.00"),
             },
@@ -394,7 +394,7 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.AuthQueryWithdraw(ctx, operations.AuthQueryWithdrawRequest{
+    res, err := s.AuthQueryWithdraw(ctx, operations.AuthQueryWithdrawRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.AuthQueryWithdrawRequestBody{
@@ -452,7 +452,7 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.AuthRefundWithdraw(ctx, operations.AuthRefundWithdrawRequest{
+    res, err := s.AuthRefundWithdraw(ctx, operations.AuthRefundWithdrawRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.AuthRefundWithdrawRequestBody{
@@ -463,7 +463,7 @@ func main() {
             PartnerRefundNo: testworkspacesamplesdk.String("20230630A001100000000090010001"),
             PublicUserID: testworkspacesamplesdk.String("AYOPOP-285FRVRWJ"),
             Reason: testworkspacesamplesdk.String("Test_Chaitu_REFUND_01"),
-            RefundAmount: &operations.AuthRefundWithdrawRequestBodyRefundAmount{
+            RefundAmount: &operations.RefundAmount{
                 Currency: testworkspacesamplesdk.String("IDR"),
                 Value: testworkspacesamplesdk.String("100.00"),
             },
@@ -516,7 +516,7 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.AuthVoidWithdraw(ctx, operations.AuthVoidWithdrawRequest{
+    res, err := s.AuthVoidWithdraw(ctx, operations.AuthVoidWithdrawRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.AuthVoidWithdrawRequestBody{
@@ -527,7 +527,7 @@ func main() {
             PartnerVoidNo: testworkspacesamplesdk.String("20230630A00000010210000020100221"),
             PublicUserID: testworkspacesamplesdk.String("AYOPOP-285FRVRWJ"),
             Reason: testworkspacesamplesdk.String("Test_Chaitu_VOID_01"),
-            VoidAmount: &operations.AuthVoidWithdrawRequestBodyVoidAmount{
+            VoidAmount: &operations.VoidAmount{
                 Currency: testworkspacesamplesdk.String("IDR"),
                 Value: testworkspacesamplesdk.String("90000.00"),
             },
@@ -580,9 +580,9 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.GenerateB2b2cToken(ctx, operations.GenerateB2b2cTokenRequest{
+    res, err := s.GenerateB2b2cToken(ctx, operations.GenerateB2b2cTokenRequest{
         RequestBody: &operations.GenerateB2b2cTokenRequestBody{
-            AdditionalInfo: &operations.GenerateB2b2cTokenRequestBodyAdditionalInfo{
+            AdditionalInfo: &operations.AdditionalInfo{
                 MerchantID: testworkspacesamplesdk.String("AYOPOP"),
             },
             AuthCode: testworkspacesamplesdk.String("7f44633389fe44ff99f976c948f7f089"),
@@ -596,7 +596,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GenerateB2b2cToken200ApplicationJSONObject != nil {
+    if res.Object != nil {
         // handle response
     }
 }
@@ -635,9 +635,9 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.GenerateB2bToken(ctx, operations.GenerateB2bTokenRequest{
+    res, err := s.GenerateB2bToken(ctx, operations.GenerateB2bTokenRequest{
         RequestBody: &operations.GenerateB2bTokenRequestBody{
-            AdditionalInfo: &operations.GenerateB2bTokenRequestBodyAdditionalInfo{
+            AdditionalInfo: &operations.GenerateB2bTokenAdditionalInfo{
                 MerchantID: testworkspacesamplesdk.String("AYOPOP"),
             },
             GrantType: testworkspacesamplesdk.String("client_credentials"),
@@ -650,7 +650,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.GenerateB2bToken200ApplicationJSONObject != nil {
+    if res.Object != nil {
         // handle response
     }
 }
@@ -689,12 +689,12 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.GenerateWebview(ctx, operations.GenerateWebviewRequest{
+    res, err := s.GenerateWebview(ctx, operations.GenerateWebviewRequest{
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.GenerateWebviewRequestBody{
             MerchantID: testworkspacesamplesdk.String("AYOPOP"),
             PartnerReferenceNo: testworkspacesamplesdk.String("20230630A00000010000100001000231"),
-            RedirectionDetails: &operations.GenerateWebviewRequestBodyRedirectionDetails{
+            RedirectionDetails: &operations.RedirectionDetails{
                 FailureMethod: testworkspacesamplesdk.String("POST"),
                 FailureURL: testworkspacesamplesdk.String("https://ayoconnect.id"),
                 RedirectionRequired: testworkspacesamplesdk.String("YES"),
@@ -751,7 +751,7 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.OtpVerification(ctx, operations.OtpVerificationRequest{
+    res, err := s.OtpVerification(ctx, operations.OtpVerificationRequest{
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.OtpVerificationRequestBody{
             MerchantID: testworkspacesamplesdk.String("AYOPOP"),
@@ -807,12 +807,12 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.Topup(ctx, operations.TopupRequest{
+    res, err := s.Topup(ctx, operations.TopupRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.TopupRequestBody{
             AccountToken: testworkspacesamplesdk.String("f8412cd5bcec47d4868fb773d8178118"),
-            Amount: &operations.TopupRequestBodyAmount{
+            Amount: &operations.TopupAmount{
                 Currency: testworkspacesamplesdk.String("IDR"),
                 Value: testworkspacesamplesdk.String("40000.00"),
             },
@@ -869,12 +869,12 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.TopupInquiry(ctx, operations.TopupInquiryRequest{
+    res, err := s.TopupInquiry(ctx, operations.TopupInquiryRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.TopupInquiryRequestBody{
             AccountToken: testworkspacesamplesdk.String("3c41c3c0d4034ca49b5f0db08dfa6d14"),
-            Amount: &operations.TopupInquiryRequestBodyAmount{
+            Amount: &operations.TopupInquiryAmount{
                 Currency: testworkspacesamplesdk.String("IDR"),
                 Value: testworkspacesamplesdk.String("500.00"),
             },
@@ -930,7 +930,7 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.TopupInquiryStatus(ctx, operations.TopupInquiryStatusRequest{
+    res, err := s.TopupInquiryStatus(ctx, operations.TopupInquiryStatusRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.TopupInquiryStatusRequestBody{
@@ -988,7 +988,7 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.WalletbalanceCustomerMerchant(ctx, operations.WalletbalanceCustomerMerchantRequest{
+    res, err := s.WalletbalanceCustomerMerchant(ctx, operations.WalletbalanceCustomerMerchantRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.WalletbalanceCustomerMerchantRequestBody{
@@ -1045,7 +1045,7 @@ func main() {
     s := testworkspacesamplesdk.New()
 
     ctx := context.Background()
-    res, err := s.WhitelabelEWallet.WalletbalanceMerchant(ctx, operations.WalletbalanceMerchantRequest{
+    res, err := s.WalletbalanceMerchant(ctx, operations.WalletbalanceMerchantRequest{
         ChannelID: testworkspacesamplesdk.String("95221"),
         RequestBody: &operations.WalletbalanceMerchantRequestBody{
             MerchantID: testworkspacesamplesdk.String("AYOPOP"),

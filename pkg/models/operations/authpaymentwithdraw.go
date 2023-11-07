@@ -6,19 +6,19 @@ import (
 	"net/http"
 )
 
-type AuthPaymentWithdrawRequestBodyAmount struct {
+type Amount struct {
 	Currency *string `json:"currency,omitempty"`
 	Value    *string `json:"value,omitempty"`
 }
 
-func (o *AuthPaymentWithdrawRequestBodyAmount) GetCurrency() *string {
+func (o *Amount) GetCurrency() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Currency
 }
 
-func (o *AuthPaymentWithdrawRequestBodyAmount) GetValue() *string {
+func (o *Amount) GetValue() *string {
 	if o == nil {
 		return nil
 	}
@@ -26,12 +26,12 @@ func (o *AuthPaymentWithdrawRequestBodyAmount) GetValue() *string {
 }
 
 type AuthPaymentWithdrawRequestBody struct {
-	AccountToken       *string                               `json:"accountToken,omitempty"`
-	Amount             *AuthPaymentWithdrawRequestBodyAmount `json:"amount,omitempty"`
-	MerchantID         *string                               `json:"merchantId,omitempty"`
-	PartnerReferenceNo *string                               `json:"partnerReferenceNo,omitempty"`
-	PublicUserID       *string                               `json:"publicUserId,omitempty"`
-	Title              *string                               `json:"title,omitempty"`
+	AccountToken       *string `json:"accountToken,omitempty"`
+	Amount             *Amount `json:"amount,omitempty"`
+	MerchantID         *string `json:"merchantId,omitempty"`
+	PartnerReferenceNo *string `json:"partnerReferenceNo,omitempty"`
+	PublicUserID       *string `json:"publicUserId,omitempty"`
+	Title              *string `json:"title,omitempty"`
 }
 
 func (o *AuthPaymentWithdrawRequestBody) GetAccountToken() *string {
@@ -41,7 +41,7 @@ func (o *AuthPaymentWithdrawRequestBody) GetAccountToken() *string {
 	return o.AccountToken
 }
 
-func (o *AuthPaymentWithdrawRequestBody) GetAmount() *AuthPaymentWithdrawRequestBodyAmount {
+func (o *AuthPaymentWithdrawRequestBody) GetAmount() *Amount {
 	if o == nil {
 		return nil
 	}

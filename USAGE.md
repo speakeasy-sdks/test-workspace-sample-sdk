@@ -15,7 +15,7 @@ func main() {
 	s := testworkspacesamplesdk.New()
 
 	ctx := context.Background()
-	res, err := s.WhitelabelEWallet.AccountBinding(ctx, operations.AccountBindingRequest{
+	res, err := s.AccountBinding(ctx, operations.AccountBindingRequest{
 		ChannelID: testworkspacesamplesdk.String("95221"),
 		RequestBody: &operations.AccountBindingRequestBody{
 			AuthCode:           testworkspacesamplesdk.String("76a345deaccf47d2ac786c1a3184f987"),

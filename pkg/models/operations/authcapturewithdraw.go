@@ -6,19 +6,19 @@ import (
 	"net/http"
 )
 
-type AuthCaptureWithdrawRequestBodyCaptureAmount struct {
+type CaptureAmount struct {
 	Currency *string `json:"currency,omitempty"`
 	Value    *string `json:"value,omitempty"`
 }
 
-func (o *AuthCaptureWithdrawRequestBodyCaptureAmount) GetCurrency() *string {
+func (o *CaptureAmount) GetCurrency() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Currency
 }
 
-func (o *AuthCaptureWithdrawRequestBodyCaptureAmount) GetValue() *string {
+func (o *CaptureAmount) GetValue() *string {
 	if o == nil {
 		return nil
 	}
@@ -26,14 +26,14 @@ func (o *AuthCaptureWithdrawRequestBodyCaptureAmount) GetValue() *string {
 }
 
 type AuthCaptureWithdrawRequestBody struct {
-	AccountToken               *string                                      `json:"accountToken,omitempty"`
-	CaptureAmount              *AuthCaptureWithdrawRequestBodyCaptureAmount `json:"captureAmount,omitempty"`
-	MerchantID                 *string                                      `json:"merchantId,omitempty"`
-	OriginalPartnerReferenceNo *string                                      `json:"originalPartnerReferenceNo,omitempty"`
-	OriginalReferenceNo        *string                                      `json:"originalReferenceNo,omitempty"`
-	PartnerCaptureNo           *string                                      `json:"partnerCaptureNo,omitempty"`
-	PublicUserID               *string                                      `json:"publicUserId,omitempty"`
-	Title                      *string                                      `json:"title,omitempty"`
+	AccountToken               *string        `json:"accountToken,omitempty"`
+	CaptureAmount              *CaptureAmount `json:"captureAmount,omitempty"`
+	MerchantID                 *string        `json:"merchantId,omitempty"`
+	OriginalPartnerReferenceNo *string        `json:"originalPartnerReferenceNo,omitempty"`
+	OriginalReferenceNo        *string        `json:"originalReferenceNo,omitempty"`
+	PartnerCaptureNo           *string        `json:"partnerCaptureNo,omitempty"`
+	PublicUserID               *string        `json:"publicUserId,omitempty"`
+	Title                      *string        `json:"title,omitempty"`
 }
 
 func (o *AuthCaptureWithdrawRequestBody) GetAccountToken() *string {
@@ -43,7 +43,7 @@ func (o *AuthCaptureWithdrawRequestBody) GetAccountToken() *string {
 	return o.AccountToken
 }
 
-func (o *AuthCaptureWithdrawRequestBody) GetCaptureAmount() *AuthCaptureWithdrawRequestBodyCaptureAmount {
+func (o *AuthCaptureWithdrawRequestBody) GetCaptureAmount() *CaptureAmount {
 	if o == nil {
 		return nil
 	}

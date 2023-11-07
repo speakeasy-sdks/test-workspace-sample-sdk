@@ -6,19 +6,19 @@ import (
 	"net/http"
 )
 
-type AuthVoidWithdrawRequestBodyVoidAmount struct {
+type VoidAmount struct {
 	Currency *string `json:"currency,omitempty"`
 	Value    *string `json:"value,omitempty"`
 }
 
-func (o *AuthVoidWithdrawRequestBodyVoidAmount) GetCurrency() *string {
+func (o *VoidAmount) GetCurrency() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Currency
 }
 
-func (o *AuthVoidWithdrawRequestBodyVoidAmount) GetValue() *string {
+func (o *VoidAmount) GetValue() *string {
 	if o == nil {
 		return nil
 	}
@@ -26,14 +26,14 @@ func (o *AuthVoidWithdrawRequestBodyVoidAmount) GetValue() *string {
 }
 
 type AuthVoidWithdrawRequestBody struct {
-	AccountToken               *string                                `json:"accountToken,omitempty"`
-	MerchantID                 *string                                `json:"merchantId,omitempty"`
-	OriginalPartnerReferenceNo *string                                `json:"originalPartnerReferenceNo,omitempty"`
-	OriginalReferenceNo        *string                                `json:"originalReferenceNo,omitempty"`
-	PartnerVoidNo              *string                                `json:"partnerVoidNo,omitempty"`
-	PublicUserID               *string                                `json:"publicUserId,omitempty"`
-	Reason                     *string                                `json:"reason,omitempty"`
-	VoidAmount                 *AuthVoidWithdrawRequestBodyVoidAmount `json:"voidAmount,omitempty"`
+	AccountToken               *string     `json:"accountToken,omitempty"`
+	MerchantID                 *string     `json:"merchantId,omitempty"`
+	OriginalPartnerReferenceNo *string     `json:"originalPartnerReferenceNo,omitempty"`
+	OriginalReferenceNo        *string     `json:"originalReferenceNo,omitempty"`
+	PartnerVoidNo              *string     `json:"partnerVoidNo,omitempty"`
+	PublicUserID               *string     `json:"publicUserId,omitempty"`
+	Reason                     *string     `json:"reason,omitempty"`
+	VoidAmount                 *VoidAmount `json:"voidAmount,omitempty"`
 }
 
 func (o *AuthVoidWithdrawRequestBody) GetAccountToken() *string {
@@ -85,7 +85,7 @@ func (o *AuthVoidWithdrawRequestBody) GetReason() *string {
 	return o.Reason
 }
 
-func (o *AuthVoidWithdrawRequestBody) GetVoidAmount() *AuthVoidWithdrawRequestBodyVoidAmount {
+func (o *AuthVoidWithdrawRequestBody) GetVoidAmount() *VoidAmount {
 	if o == nil {
 		return nil
 	}

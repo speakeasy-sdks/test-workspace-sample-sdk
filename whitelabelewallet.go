@@ -236,9 +236,9 @@ func New(opts ...SDKOption) *WhitelabelEWallet {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "0.1.0",
-			GenVersion:        "2.171.0",
-			UserAgent:         "speakeasy-sdk/go 0.1.0 2.171.0 1.0.0 github.com/speakeasy-sdks/test-workspace-sample-sdk",
+			SDKVersion:        "0.2.0",
+			GenVersion:        "2.181.1",
+			UserAgent:         "speakeasy-sdk/go 0.2.0 2.181.1 1.0.0 github.com/speakeasy-sdks/test-workspace-sample-sdk",
 		},
 	}
 	for _, opt := range opts {
@@ -365,12 +365,12 @@ func (s *WhitelabelEWallet) AccountCreation(ctx context.Context, request operati
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out operations.AccountCreation200ApplicationJSON
+			var out operations.AccountCreationResponseBody
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.AccountCreation200ApplicationJSONObject = &out
+			res.Object = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -720,12 +720,12 @@ func (s *WhitelabelEWallet) GenerateB2b2cToken(ctx context.Context, request oper
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out operations.GenerateB2b2cToken200ApplicationJSON
+			var out operations.GenerateB2b2cTokenResponseBody
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.GenerateB2b2cToken200ApplicationJSONObject = &out
+			res.Object = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}
@@ -790,12 +790,12 @@ func (s *WhitelabelEWallet) GenerateB2bToken(ctx context.Context, request operat
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out operations.GenerateB2bToken200ApplicationJSON
+			var out operations.GenerateB2bTokenResponseBody
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.GenerateB2bToken200ApplicationJSONObject = &out
+			res.Object = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}

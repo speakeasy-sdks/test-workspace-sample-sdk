@@ -100,8 +100,8 @@ func (o *AccountCreationRequest) GetXTimestamp() *string {
 	return o.XTimestamp
 }
 
-// AccountCreation200ApplicationJSON - Account Creation response
-type AccountCreation200ApplicationJSON struct {
+// AccountCreationResponseBody - Account Creation response
+type AccountCreationResponseBody struct {
 	PartnerReferenceNo *string `json:"partnerReferenceNo,omitempty"`
 	ReferenceNo        *string `json:"referenceNo,omitempty"`
 	RegistrationToken  *string `json:"registrationToken,omitempty"`
@@ -110,42 +110,42 @@ type AccountCreation200ApplicationJSON struct {
 	ResponseTime       *string `json:"responseTime,omitempty"`
 }
 
-func (o *AccountCreation200ApplicationJSON) GetPartnerReferenceNo() *string {
+func (o *AccountCreationResponseBody) GetPartnerReferenceNo() *string {
 	if o == nil {
 		return nil
 	}
 	return o.PartnerReferenceNo
 }
 
-func (o *AccountCreation200ApplicationJSON) GetReferenceNo() *string {
+func (o *AccountCreationResponseBody) GetReferenceNo() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ReferenceNo
 }
 
-func (o *AccountCreation200ApplicationJSON) GetRegistrationToken() *string {
+func (o *AccountCreationResponseBody) GetRegistrationToken() *string {
 	if o == nil {
 		return nil
 	}
 	return o.RegistrationToken
 }
 
-func (o *AccountCreation200ApplicationJSON) GetResponseCode() *string {
+func (o *AccountCreationResponseBody) GetResponseCode() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ResponseCode
 }
 
-func (o *AccountCreation200ApplicationJSON) GetResponseMessage() *string {
+func (o *AccountCreationResponseBody) GetResponseMessage() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ResponseMessage
 }
 
-func (o *AccountCreation200ApplicationJSON) GetResponseTime() *string {
+func (o *AccountCreationResponseBody) GetResponseTime() *string {
 	if o == nil {
 		return nil
 	}
@@ -161,7 +161,7 @@ type AccountCreationResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Account Creation response
-	AccountCreation200ApplicationJSONObject *AccountCreation200ApplicationJSON
+	Object *AccountCreationResponseBody
 }
 
 func (o *AccountCreationResponse) GetContentType() string {
@@ -192,9 +192,9 @@ func (o *AccountCreationResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *AccountCreationResponse) GetAccountCreation200ApplicationJSONObject() *AccountCreation200ApplicationJSON {
+func (o *AccountCreationResponse) GetObject() *AccountCreationResponseBody {
 	if o == nil {
 		return nil
 	}
-	return o.AccountCreation200ApplicationJSONObject
+	return o.Object
 }

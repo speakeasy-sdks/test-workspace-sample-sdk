@@ -1,6 +1,6 @@
-# GenerateB2b2cToken200ApplicationJSON
+# GenerateB2bTokenResponseBody
 
-Generate B2B2C token response
+Generate B2B token response
 
 
 ## Fields

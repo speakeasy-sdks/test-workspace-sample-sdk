@@ -6,11 +6,11 @@ import (
 	"net/http"
 )
 
-type GenerateB2b2cTokenRequestBodyAdditionalInfo struct {
+type AdditionalInfo struct {
 	MerchantID *string `json:"merchantId,omitempty"`
 }
 
-func (o *GenerateB2b2cTokenRequestBodyAdditionalInfo) GetMerchantID() *string {
+func (o *AdditionalInfo) GetMerchantID() *string {
 	if o == nil {
 		return nil
 	}
@@ -18,12 +18,12 @@ func (o *GenerateB2b2cTokenRequestBodyAdditionalInfo) GetMerchantID() *string {
 }
 
 type GenerateB2b2cTokenRequestBody struct {
-	AdditionalInfo *GenerateB2b2cTokenRequestBodyAdditionalInfo `json:"additionalInfo,omitempty"`
-	AuthCode       *string                                      `json:"authCode,omitempty"`
-	GrantType      *string                                      `json:"grantType,omitempty"`
+	AdditionalInfo *AdditionalInfo `json:"additionalInfo,omitempty"`
+	AuthCode       *string         `json:"authCode,omitempty"`
+	GrantType      *string         `json:"grantType,omitempty"`
 }
 
-func (o *GenerateB2b2cTokenRequestBody) GetAdditionalInfo() *GenerateB2b2cTokenRequestBodyAdditionalInfo {
+func (o *GenerateB2b2cTokenRequestBody) GetAdditionalInfo() *AdditionalInfo {
 	if o == nil {
 		return nil
 	}
@@ -79,8 +79,8 @@ func (o *GenerateB2b2cTokenRequest) GetXTimestamp() *string {
 	return o.XTimestamp
 }
 
-// GenerateB2b2cToken200ApplicationJSON - Generate B2B2C token response
-type GenerateB2b2cToken200ApplicationJSON struct {
+// GenerateB2b2cTokenResponseBody - Generate B2B2C token response
+type GenerateB2b2cTokenResponseBody struct {
 	AccessToken     *string `json:"accessToken,omitempty"`
 	ExpiresIn       *string `json:"expiresIn,omitempty"`
 	ResponseCode    *string `json:"responseCode,omitempty"`
@@ -89,42 +89,42 @@ type GenerateB2b2cToken200ApplicationJSON struct {
 	TokenType       *string `json:"tokenType,omitempty"`
 }
 
-func (o *GenerateB2b2cToken200ApplicationJSON) GetAccessToken() *string {
+func (o *GenerateB2b2cTokenResponseBody) GetAccessToken() *string {
 	if o == nil {
 		return nil
 	}
 	return o.AccessToken
 }
 
-func (o *GenerateB2b2cToken200ApplicationJSON) GetExpiresIn() *string {
+func (o *GenerateB2b2cTokenResponseBody) GetExpiresIn() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ExpiresIn
 }
 
-func (o *GenerateB2b2cToken200ApplicationJSON) GetResponseCode() *string {
+func (o *GenerateB2b2cTokenResponseBody) GetResponseCode() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ResponseCode
 }
 
-func (o *GenerateB2b2cToken200ApplicationJSON) GetResponseMessage() *string {
+func (o *GenerateB2b2cTokenResponseBody) GetResponseMessage() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ResponseMessage
 }
 
-func (o *GenerateB2b2cToken200ApplicationJSON) GetResponseTime() *string {
+func (o *GenerateB2b2cTokenResponseBody) GetResponseTime() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ResponseTime
 }
 
-func (o *GenerateB2b2cToken200ApplicationJSON) GetTokenType() *string {
+func (o *GenerateB2b2cTokenResponseBody) GetTokenType() *string {
 	if o == nil {
 		return nil
 	}
@@ -140,7 +140,7 @@ type GenerateB2b2cTokenResponse struct {
 	// Raw HTTP response; suitable for custom response parsing
 	RawResponse *http.Response
 	// Generate B2B2C token response
-	GenerateB2b2cToken200ApplicationJSONObject *GenerateB2b2cToken200ApplicationJSON
+	Object *GenerateB2b2cTokenResponseBody
 }
 
 func (o *GenerateB2b2cTokenResponse) GetContentType() string {
@@ -171,9 +171,9 @@ func (o *GenerateB2b2cTokenResponse) GetRawResponse() *http.Response {
 	return o.RawResponse
 }
 
-func (o *GenerateB2b2cTokenResponse) GetGenerateB2b2cToken200ApplicationJSONObject() *GenerateB2b2cToken200ApplicationJSON {
+func (o *GenerateB2b2cTokenResponse) GetObject() *GenerateB2b2cTokenResponseBody {
 	if o == nil {
 		return nil
 	}
-	return o.GenerateB2b2cToken200ApplicationJSONObject
+	return o.Object
 }

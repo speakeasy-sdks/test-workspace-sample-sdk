@@ -6,19 +6,19 @@ import (
 	"net/http"
 )
 
-type AuthRefundWithdrawRequestBodyRefundAmount struct {
+type RefundAmount struct {
 	Currency *string `json:"currency,omitempty"`
 	Value    *string `json:"value,omitempty"`
 }
 
-func (o *AuthRefundWithdrawRequestBodyRefundAmount) GetCurrency() *string {
+func (o *RefundAmount) GetCurrency() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Currency
 }
 
-func (o *AuthRefundWithdrawRequestBodyRefundAmount) GetValue() *string {
+func (o *RefundAmount) GetValue() *string {
 	if o == nil {
 		return nil
 	}
@@ -26,14 +26,14 @@ func (o *AuthRefundWithdrawRequestBodyRefundAmount) GetValue() *string {
 }
 
 type AuthRefundWithdrawRequestBody struct {
-	AccountToken               *string                                    `json:"accountToken,omitempty"`
-	MerchantID                 *string                                    `json:"merchantId,omitempty"`
-	OriginalCaptureNo          *string                                    `json:"originalCaptureNo,omitempty"`
-	OriginalPartnerReferenceNo *string                                    `json:"originalPartnerReferenceNo,omitempty"`
-	PartnerRefundNo            *string                                    `json:"partnerRefundNo,omitempty"`
-	PublicUserID               *string                                    `json:"publicUserId,omitempty"`
-	Reason                     *string                                    `json:"reason,omitempty"`
-	RefundAmount               *AuthRefundWithdrawRequestBodyRefundAmount `json:"refundAmount,omitempty"`
+	AccountToken               *string       `json:"accountToken,omitempty"`
+	MerchantID                 *string       `json:"merchantId,omitempty"`
+	OriginalCaptureNo          *string       `json:"originalCaptureNo,omitempty"`
+	OriginalPartnerReferenceNo *string       `json:"originalPartnerReferenceNo,omitempty"`
+	PartnerRefundNo            *string       `json:"partnerRefundNo,omitempty"`
+	PublicUserID               *string       `json:"publicUserId,omitempty"`
+	Reason                     *string       `json:"reason,omitempty"`
+	RefundAmount               *RefundAmount `json:"refundAmount,omitempty"`
 }
 
 func (o *AuthRefundWithdrawRequestBody) GetAccountToken() *string {
@@ -85,7 +85,7 @@ func (o *AuthRefundWithdrawRequestBody) GetReason() *string {
 	return o.Reason
 }
 
-func (o *AuthRefundWithdrawRequestBody) GetRefundAmount() *AuthRefundWithdrawRequestBodyRefundAmount {
+func (o *AuthRefundWithdrawRequestBody) GetRefundAmount() *RefundAmount {
 	if o == nil {
 		return nil
 	}

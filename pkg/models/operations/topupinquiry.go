@@ -6,19 +6,19 @@ import (
 	"net/http"
 )
 
-type TopupInquiryRequestBodyAmount struct {
+type TopupInquiryAmount struct {
 	Currency *string `json:"currency,omitempty"`
 	Value    *string `json:"value,omitempty"`
 }
 
-func (o *TopupInquiryRequestBodyAmount) GetCurrency() *string {
+func (o *TopupInquiryAmount) GetCurrency() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Currency
 }
 
-func (o *TopupInquiryRequestBodyAmount) GetValue() *string {
+func (o *TopupInquiryAmount) GetValue() *string {
 	if o == nil {
 		return nil
 	}
@@ -26,11 +26,11 @@ func (o *TopupInquiryRequestBodyAmount) GetValue() *string {
 }
 
 type TopupInquiryRequestBody struct {
-	AccountToken       *string                        `json:"accountToken,omitempty"`
-	Amount             *TopupInquiryRequestBodyAmount `json:"amount,omitempty"`
-	MerchantID         *string                        `json:"merchantId,omitempty"`
-	PartnerReferenceNo *string                        `json:"partnerReferenceNo,omitempty"`
-	PublicUserID       *string                        `json:"publicUserId,omitempty"`
+	AccountToken       *string             `json:"accountToken,omitempty"`
+	Amount             *TopupInquiryAmount `json:"amount,omitempty"`
+	MerchantID         *string             `json:"merchantId,omitempty"`
+	PartnerReferenceNo *string             `json:"partnerReferenceNo,omitempty"`
+	PublicUserID       *string             `json:"publicUserId,omitempty"`
 }
 
 func (o *TopupInquiryRequestBody) GetAccountToken() *string {
@@ -40,7 +40,7 @@ func (o *TopupInquiryRequestBody) GetAccountToken() *string {
 	return o.AccountToken
 }
 
-func (o *TopupInquiryRequestBody) GetAmount() *TopupInquiryRequestBodyAmount {
+func (o *TopupInquiryRequestBody) GetAmount() *TopupInquiryAmount {
 	if o == nil {
 		return nil
 	}

@@ -1,4 +1,4 @@
-# GenerateB2bTokenRequestBodyAdditionalInfo
+# AdditionalInfo
 
 
 ## Fields

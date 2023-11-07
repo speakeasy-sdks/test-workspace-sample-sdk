@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type GenerateWebviewRequestBodyRedirectionDetails struct {
+type RedirectionDetails struct {
 	FailureMethod       *string `json:"failureMethod,omitempty"`
 	FailureURL          *string `json:"failureURL,omitempty"`
 	RedirectionRequired *string `json:"redirectionRequired,omitempty"`
@@ -14,35 +14,35 @@ type GenerateWebviewRequestBodyRedirectionDetails struct {
 	SuccessURL          *string `json:"successURL,omitempty"`
 }
 
-func (o *GenerateWebviewRequestBodyRedirectionDetails) GetFailureMethod() *string {
+func (o *RedirectionDetails) GetFailureMethod() *string {
 	if o == nil {
 		return nil
 	}
 	return o.FailureMethod
 }
 
-func (o *GenerateWebviewRequestBodyRedirectionDetails) GetFailureURL() *string {
+func (o *RedirectionDetails) GetFailureURL() *string {
 	if o == nil {
 		return nil
 	}
 	return o.FailureURL
 }
 
-func (o *GenerateWebviewRequestBodyRedirectionDetails) GetRedirectionRequired() *string {
+func (o *RedirectionDetails) GetRedirectionRequired() *string {
 	if o == nil {
 		return nil
 	}
 	return o.RedirectionRequired
 }
 
-func (o *GenerateWebviewRequestBodyRedirectionDetails) GetSuccessMethod() *string {
+func (o *RedirectionDetails) GetSuccessMethod() *string {
 	if o == nil {
 		return nil
 	}
 	return o.SuccessMethod
 }
 
-func (o *GenerateWebviewRequestBodyRedirectionDetails) GetSuccessURL() *string {
+func (o *RedirectionDetails) GetSuccessURL() *string {
 	if o == nil {
 		return nil
 	}
@@ -50,10 +50,10 @@ func (o *GenerateWebviewRequestBodyRedirectionDetails) GetSuccessURL() *string {
 }
 
 type GenerateWebviewRequestBody struct {
-	MerchantID         *string                                       `json:"merchantId,omitempty"`
-	PartnerReferenceNo *string                                       `json:"partnerReferenceNo,omitempty"`
-	RedirectionDetails *GenerateWebviewRequestBodyRedirectionDetails `json:"redirectionDetails,omitempty"`
-	RegistrationToken  *string                                       `json:"registrationToken,omitempty"`
+	MerchantID         *string             `json:"merchantId,omitempty"`
+	PartnerReferenceNo *string             `json:"partnerReferenceNo,omitempty"`
+	RedirectionDetails *RedirectionDetails `json:"redirectionDetails,omitempty"`
+	RegistrationToken  *string             `json:"registrationToken,omitempty"`
 }
 
 func (o *GenerateWebviewRequestBody) GetMerchantID() *string {
@@ -70,7 +70,7 @@ func (o *GenerateWebviewRequestBody) GetPartnerReferenceNo() *string {
 	return o.PartnerReferenceNo
 }
 
-func (o *GenerateWebviewRequestBody) GetRedirectionDetails() *GenerateWebviewRequestBodyRedirectionDetails {
+func (o *GenerateWebviewRequestBody) GetRedirectionDetails() *RedirectionDetails {
 	if o == nil {
 		return nil
 	}
