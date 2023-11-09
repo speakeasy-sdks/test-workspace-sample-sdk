@@ -1,0 +1,10 @@
+# GenerateB2b2cTokenRequestBody
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    | Example                                                                        |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `AdditionalInfo`                                                               | [*operations.AdditionalInfo](../../../pkg/models/operations/additionalinfo.md) | :heavy_minus_sign:                                                             | N/A                                                                            |                                                                                |
+| `AuthCode`                                                                     | **string*                                                                      | :heavy_minus_sign:                                                             | N/A                                                                            | 7f44633389fe44ff99f976c948f7f089                                               |
+| `GrantType`                                                                    | **string*                                                                      | :heavy_minus_sign:                                                             | N/A                                                                            | authorization_code                                                             |
