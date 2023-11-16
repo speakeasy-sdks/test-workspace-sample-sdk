@@ -152,7 +152,7 @@ func (o *GenerateB2b2cTokenResponse) GetContentType() string {
 
 func (o *GenerateB2b2cTokenResponse) GetHeaders() map[string][]string {
 	if o == nil {
-		return nil
+		return map[string][]string{}
 	}
 	return o.Headers
 }

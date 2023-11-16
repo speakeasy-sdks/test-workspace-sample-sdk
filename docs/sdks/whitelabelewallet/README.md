@@ -146,10 +146,11 @@ Account Binding
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -203,10 +204,10 @@ Account CreationÐ
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -262,10 +263,11 @@ Auth Capture - withdraw
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -328,10 +330,11 @@ Auth Payment - withdraw
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -392,10 +395,11 @@ Auth Query - withdraw
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -452,10 +456,11 @@ Auth Refund - withdraw
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -518,10 +523,11 @@ Auth Void - withdraw
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -584,10 +590,10 @@ This API generates access token used in TopUp & Withdrawal flow.
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -641,10 +647,10 @@ This API generates access token used in Authorization Headers of Customer Regist
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
 )
 
 func main() {
@@ -697,10 +703,11 @@ Generate WebView
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -761,10 +768,11 @@ OTP Verification
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -819,10 +827,11 @@ TopUp
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -883,10 +892,11 @@ TopUp- Inquiry
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -946,10 +956,11 @@ TopUp - Inquiry Status
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -1006,10 +1017,11 @@ WalletBalance - Customer Merchant
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -1065,10 +1077,11 @@ WalletBalance - Merchant
 package main
 
 import(
-	"context"
-	"log"
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
+	"context"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
+	"log"
+	"net/http"
 )
 
 func main() {

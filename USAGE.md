@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```go
 package main
 
@@ -9,6 +7,7 @@ import (
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
 	"log"
+	"net/http"
 )
 
 func main() {
