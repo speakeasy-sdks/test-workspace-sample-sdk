@@ -34,7 +34,6 @@ pkg/utils/utils.go
 /pkg/models/operations/topupinquirystatus.go
 /pkg/models/operations/walletbalancecustomermerchant.go
 /pkg/models/operations/walletbalancemerchant.go
-USAGE.md
 docs/pkg/models/operations/accountbindingrequestbody.md
 docs/pkg/models/operations/accountbindingrequest.md
 docs/pkg/models/operations/accountbindingresponse.md
@@ -96,4 +95,5 @@ docs/pkg/models/operations/walletbalancemerchantrequestbody.md
 docs/pkg/models/operations/walletbalancemerchantrequest.md
 docs/pkg/models/operations/walletbalancemerchantresponse.md
 docs/sdks/whitelabelewallet/README.md
+USAGE.md
 .gitattributes
