@@ -192,7 +192,7 @@ func main() {
 **[*operations.AccountBindingResponse](../../pkg/models/operations/accountbindingresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## AccountCreation
 
@@ -251,7 +251,7 @@ func main() {
 **[*operations.AccountCreationResponse](../../pkg/models/operations/accountcreationresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## AuthCaptureWithdraw
 
@@ -318,7 +318,7 @@ func main() {
 **[*operations.AuthCaptureWithdrawResponse](../../pkg/models/operations/authcapturewithdrawresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## AuthPaymentWithdraw
 
@@ -383,7 +383,7 @@ func main() {
 **[*operations.AuthPaymentWithdrawResponse](../../pkg/models/operations/authpaymentwithdrawresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## AuthQueryWithdraw
 
@@ -444,7 +444,7 @@ func main() {
 **[*operations.AuthQueryWithdrawResponse](../../pkg/models/operations/authquerywithdrawresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## AuthRefundWithdraw
 
@@ -511,7 +511,7 @@ func main() {
 **[*operations.AuthRefundWithdrawResponse](../../pkg/models/operations/authrefundwithdrawresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## AuthVoidWithdraw
 
@@ -578,7 +578,7 @@ func main() {
 **[*operations.AuthVoidWithdrawResponse](../../pkg/models/operations/authvoidwithdrawresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GenerateB2b2cToken
 
@@ -635,7 +635,7 @@ func main() {
 **[*operations.GenerateB2b2cTokenResponse](../../pkg/models/operations/generateb2b2ctokenresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GenerateB2bToken
 
@@ -691,7 +691,7 @@ func main() {
 **[*operations.GenerateB2bTokenResponse](../../pkg/models/operations/generateb2btokenresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## GenerateWebview
 
@@ -756,7 +756,7 @@ func main() {
 **[*operations.GenerateWebviewResponse](../../pkg/models/operations/generatewebviewresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## OtpVerification
 
@@ -815,7 +815,7 @@ func main() {
 **[*operations.OtpVerificationResponse](../../pkg/models/operations/otpverificationresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## Topup
 
@@ -880,7 +880,7 @@ func main() {
 **[*operations.TopupResponse](../../pkg/models/operations/topupresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## TopupInquiry
 
@@ -944,7 +944,7 @@ func main() {
 **[*operations.TopupInquiryResponse](../../pkg/models/operations/topupinquiryresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## TopupInquiryStatus
 
@@ -1005,7 +1005,7 @@ func main() {
 **[*operations.TopupInquiryStatusResponse](../../pkg/models/operations/topupinquirystatusresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## WalletbalanceCustomerMerchant
 
@@ -1065,7 +1065,7 @@ func main() {
 **[*operations.WalletbalanceCustomerMerchantResponse](../../pkg/models/operations/walletbalancecustomermerchantresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
 
 ## WalletbalanceMerchant
 
@@ -1122,4 +1122,4 @@ func main() {
 **[*operations.WalletbalanceMerchantResponse](../../pkg/models/operations/walletbalancemerchantresponse.md), error**
 | Error Object       | Status Code        | Content Type       |
 | ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 400-600            | */*                |
+| sdkerrors.SDKError | 4xx-5xx            | */*                |
