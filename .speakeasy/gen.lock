@@ -4,7 +4,7 @@ management:
   docChecksum: dfbfac1cfd99bb11028a16f746df2a96
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.234.3
+  generationVersion: 2.237.2
   releaseVersion: 0.3.2
   configChecksum: 767647f28b62b5eec408e1c110603d99
   repoURL: https://github.com/speakeasy-sdks/test-workspace-sample-sdk.git
@@ -19,7 +19,6 @@ generatedFiles:
   - whitelabelewallet.go
   - go.mod
   - go.sum
-  - tests/helpers.go
   - pkg/models/sdkerrors/sdkerror.go
   - pkg/types/bigint.go
   - pkg/types/date.go
