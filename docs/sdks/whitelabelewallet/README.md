@@ -159,11 +159,6 @@ func main() {
     ctx := context.Background()
     res, err := s.AccountBinding(ctx, operations.AccountBindingRequest{
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.AccountBindingRequestBody{
-            AuthCode: testworkspacesamplesdk.String("76a345deaccf47d2ac786c1a3184f987"),
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            PartnerReferenceNo: testworkspacesamplesdk.String("20230630A00000000000010000000203"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41017551351950293184162180797889"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
@@ -216,13 +211,6 @@ func main() {
     ctx := context.Background()
     res, err := s.AccountCreation(ctx, operations.AccountCreationRequest{
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.AccountCreationRequestBody{
-            Email: testworkspacesamplesdk.String("test_WE_06@email.com"),
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            Name: testworkspacesamplesdk.String("TEST WE 06"),
-            PartnerReferenceNo: testworkspacesamplesdk.String("20210630A10010110011010001001224"),
-            PhoneNo: testworkspacesamplesdk.String("6289970864245"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41017551351950293184162180797889"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
@@ -277,19 +265,6 @@ func main() {
     res, err := s.AuthCaptureWithdraw(ctx, operations.AuthCaptureWithdrawRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.AuthCaptureWithdrawRequestBody{
-            AccountToken: testworkspacesamplesdk.String("633ca3e9035441299cca3bd54392b6af"),
-            CaptureAmount: &operations.CaptureAmount{
-                Currency: testworkspacesamplesdk.String("IDR"),
-                Value: testworkspacesamplesdk.String("90000.00"),
-            },
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            OriginalPartnerReferenceNo: testworkspacesamplesdk.String("2020102900000000000100"),
-            OriginalReferenceNo: testworkspacesamplesdk.String("9484481d8f98495288f1c79b0363161c"),
-            PartnerCaptureNo: testworkspacesamplesdk.String("2020102900000000000103"),
-            PublicUserID: testworkspacesamplesdk.String("AYOPOP-285FWN8WD"),
-            Title: testworkspacesamplesdk.String("Test_Chaitu_01"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41807553358950093184162180797673"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
@@ -344,17 +319,6 @@ func main() {
     res, err := s.AuthPaymentWithdraw(ctx, operations.AuthPaymentWithdrawRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.AuthPaymentWithdrawRequestBody{
-            AccountToken: testworkspacesamplesdk.String("9f7cfb9e8b744785b0e5a0496dccab48"),
-            Amount: &operations.Amount{
-                Currency: testworkspacesamplesdk.String("IDR"),
-                Value: testworkspacesamplesdk.String("100000.00"),
-            },
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            PartnerReferenceNo: testworkspacesamplesdk.String("30201012592224045978914301029091010910998"),
-            PublicUserID: testworkspacesamplesdk.String("AYOPOP-285FRVRWJ"),
-            Title: testworkspacesamplesdk.String("Test"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41809082831351123412265280797891"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
@@ -409,13 +373,6 @@ func main() {
     res, err := s.AuthQueryWithdraw(ctx, operations.AuthQueryWithdrawRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.AuthQueryWithdrawRequestBody{
-            AccountToken: testworkspacesamplesdk.String("633ca3e9035441299cca3bd54392b6af"),
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            OriginalPartnerReferenceNo: testworkspacesamplesdk.String("2020102900000000000099"),
-            OriginalReferenceNo: testworkspacesamplesdk.String("0c90403c9dd9419eb033c50a53853625"),
-            PublicUserID: testworkspacesamplesdk.String("AYOPOP-285FWN8WD"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41807553358950093184162180797673"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
@@ -470,19 +427,6 @@ func main() {
     res, err := s.AuthRefundWithdraw(ctx, operations.AuthRefundWithdrawRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.AuthRefundWithdrawRequestBody{
-            AccountToken: testworkspacesamplesdk.String("9f7cfb9e8b744785b0e5a0496dccab48"),
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            OriginalCaptureNo: testworkspacesamplesdk.String("20230630A09101111001100110000108"),
-            OriginalPartnerReferenceNo: testworkspacesamplesdk.String("30201012592224045978914301029091010910998"),
-            PartnerRefundNo: testworkspacesamplesdk.String("20230630A001100000000090010001"),
-            PublicUserID: testworkspacesamplesdk.String("AYOPOP-285FRVRWJ"),
-            Reason: testworkspacesamplesdk.String("Test_Chaitu_REFUND_01"),
-            RefundAmount: &operations.RefundAmount{
-                Currency: testworkspacesamplesdk.String("IDR"),
-                Value: testworkspacesamplesdk.String("100.00"),
-            },
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41809082831351123412254280797892"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
@@ -537,19 +481,6 @@ func main() {
     res, err := s.AuthVoidWithdraw(ctx, operations.AuthVoidWithdrawRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.AuthVoidWithdrawRequestBody{
-            AccountToken: testworkspacesamplesdk.String("9f7cfb9e8b744785b0e5a0496dccab48"),
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            OriginalPartnerReferenceNo: testworkspacesamplesdk.String("30201012591224045978914301029091010910998"),
-            OriginalReferenceNo: testworkspacesamplesdk.String("30201012591224045978914301029091010910998"),
-            PartnerVoidNo: testworkspacesamplesdk.String("20230630A00000010210000020100221"),
-            PublicUserID: testworkspacesamplesdk.String("AYOPOP-285FRVRWJ"),
-            Reason: testworkspacesamplesdk.String("Test_Chaitu_VOID_01"),
-            VoidAmount: &operations.VoidAmount{
-                Currency: testworkspacesamplesdk.String("IDR"),
-                Value: testworkspacesamplesdk.String("90000.00"),
-            },
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41809082831351123412254280797891"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
@@ -601,13 +532,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.GenerateB2b2cToken(ctx, operations.GenerateB2b2cTokenRequest{
-        RequestBody: &operations.GenerateB2b2cTokenRequestBody{
-            AdditionalInfo: &operations.AdditionalInfo{
-                MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            },
-            AuthCode: testworkspacesamplesdk.String("7f44633389fe44ff99f976c948f7f089"),
-            GrantType: testworkspacesamplesdk.String("authorization_code"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
         XTimestamp: testworkspacesamplesdk.String("2023-10-06T18:47:02+07:00"),
@@ -658,12 +582,6 @@ func main() {
 
     ctx := context.Background()
     res, err := s.GenerateB2bToken(ctx, operations.GenerateB2bTokenRequest{
-        RequestBody: &operations.GenerateB2bTokenRequestBody{
-            AdditionalInfo: &operations.GenerateB2bTokenAdditionalInfo{
-                MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            },
-            GrantType: testworkspacesamplesdk.String("client_credentials"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
         XTimestamp: testworkspacesamplesdk.String("2023-10-06T18:47:02+07:00"),
@@ -716,18 +634,6 @@ func main() {
     ctx := context.Background()
     res, err := s.GenerateWebview(ctx, operations.GenerateWebviewRequest{
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.GenerateWebviewRequestBody{
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            PartnerReferenceNo: testworkspacesamplesdk.String("20230630A00000010000100001000231"),
-            RedirectionDetails: &operations.RedirectionDetails{
-                FailureMethod: testworkspacesamplesdk.String("POST"),
-                FailureURL: testworkspacesamplesdk.String("https://ayoconnect.id"),
-                RedirectionRequired: testworkspacesamplesdk.String("YES"),
-                SuccessMethod: testworkspacesamplesdk.String("PUT"),
-                SuccessURL: testworkspacesamplesdk.String("https://ayoconnect.id"),
-            },
-            RegistrationToken: testworkspacesamplesdk.String("1abd2523beaf46d79fe7f961af0509ce"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41017551351950293184162180797889"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
@@ -781,12 +687,6 @@ func main() {
     ctx := context.Background()
     res, err := s.OtpVerification(ctx, operations.OtpVerificationRequest{
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.OtpVerificationRequestBody{
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            Otp: testworkspacesamplesdk.String("737661"),
-            PartnerReferenceNo: testworkspacesamplesdk.String("20210630A10010010010010001011248"),
-            RegistrationToken: testworkspacesamplesdk.String("1abd2523beaf46d79fe7f961af0509ce"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41017551351950293184162180797889"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
@@ -841,17 +741,6 @@ func main() {
     res, err := s.Topup(ctx, operations.TopupRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.TopupRequestBody{
-            AccountToken: testworkspacesamplesdk.String("f8412cd5bcec47d4868fb773d8178118"),
-            Amount: &operations.TopupAmount{
-                Currency: testworkspacesamplesdk.String("IDR"),
-                Value: testworkspacesamplesdk.String("40000.00"),
-            },
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            PartnerReferenceNo: testworkspacesamplesdk.String("20230630A00000000000000000000206"),
-            PublicUserID: testworkspacesamplesdk.String("AYOPOP-285FWN8WD"),
-            Title: testworkspacesamplesdk.String("Test_Chaitu_TOPUP_03"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41807553358950093184162180797685"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
@@ -906,16 +795,6 @@ func main() {
     res, err := s.TopupInquiry(ctx, operations.TopupInquiryRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.TopupInquiryRequestBody{
-            AccountToken: testworkspacesamplesdk.String("3c41c3c0d4034ca49b5f0db08dfa6d14"),
-            Amount: &operations.TopupInquiryAmount{
-                Currency: testworkspacesamplesdk.String("IDR"),
-                Value: testworkspacesamplesdk.String("500.00"),
-            },
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            PartnerReferenceNo: testworkspacesamplesdk.String("20230639A00910101601150010000205"),
-            PublicUserID: testworkspacesamplesdk.String("AYOPOP-285FRVRWJ"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41107553135762192124162280797654"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
@@ -970,13 +849,6 @@ func main() {
     res, err := s.TopupInquiryStatus(ctx, operations.TopupInquiryStatusRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.TopupInquiryStatusRequestBody{
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            OriginalPartnerReferenceNo: testworkspacesamplesdk.String("20230630A00000000000000000000205"),
-            OriginalReferenceNo: testworkspacesamplesdk.String("f51dd569fee44cd8943358db0ab94dab"),
-            PublicUserID: testworkspacesamplesdk.String("AYOPOP-285FWN8WD"),
-            ServiceCode: testworkspacesamplesdk.String("43"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41807553358950093184162180797685"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
@@ -1031,12 +903,6 @@ func main() {
     res, err := s.WalletbalanceCustomerMerchant(ctx, operations.WalletbalanceCustomerMerchantRequest{
         AuthorizationCustomer: testworkspacesamplesdk.String("Bearer {{b2b2c_token}}"),
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.WalletbalanceCustomerMerchantRequestBody{
-            AccountToken: testworkspacesamplesdk.String("3c41c3c0d4034ca49b5f0db08dfa6d14"),
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            PartnerReferenceNo: testworkspacesamplesdk.String("20230630A00000000000000000000220"),
-            PublicUserID: testworkspacesamplesdk.String("AYOPOP-285FRVRWJ"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41807553358950093184162180797896"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),
@@ -1090,10 +956,6 @@ func main() {
     ctx := context.Background()
     res, err := s.WalletbalanceMerchant(ctx, operations.WalletbalanceMerchantRequest{
         ChannelID: testworkspacesamplesdk.String("95221"),
-        RequestBody: &operations.WalletbalanceMerchantRequestBody{
-            MerchantID: testworkspacesamplesdk.String("AYOPOP"),
-            PartnerReferenceNo: testworkspacesamplesdk.String("20230630A00000000000000000000220"),
-        },
         XClientKey: testworkspacesamplesdk.String("h8XiZaCHAaNIvUh60AQqwYO0hJssGfNt80Gq0LaMriOTUAH"),
         XExternalID: testworkspacesamplesdk.String("41807553358950093184162180797896"),
         XSignature: testworkspacesamplesdk.String("57e850c5daaa6c8afb60801f9f47245b9ceef63cf76a46c1eb717e5e9174e260ce8dff1fde0a9870139840d081b4ff2c3a6a38bb2ce9df7e4115d2d61071b690957b328fa6dfb29b3305c7e596c96accc4f2515e7a5bae720062606c29b6500979bca96220e838da85c2312647ce837df49f6fa1ccf89c33aa9c46287074f1e70fc20dbada8ebee81177b18b001dabfd4464487c41d3f124178583d152339547e25b5bbbc6dfd4ec3d498e07f70dd1f91e4968c1798578c3a967be7ac0b43fb988c9a36598cba9344a9cbb4f8b0b55d533f73c6966f96f6f29945e28fbdf8a180cf51451a28ac588ba4a94f53c1c6e64977c641daac8fd195157e3fb589be45c"),

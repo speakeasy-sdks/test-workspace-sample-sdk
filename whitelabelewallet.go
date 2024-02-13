@@ -236,9 +236,9 @@ func New(opts ...SDKOption) *WhitelabelEWallet {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "0.4.0",
-			GenVersion:        "2.250.2",
-			UserAgent:         "speakeasy-sdk/go 0.4.0 2.250.2 1.0.0 github.com/speakeasy-sdks/test-workspace-sample-sdk",
+			SDKVersion:        "0.4.1",
+			GenVersion:        "2.253.0",
+			UserAgent:         "speakeasy-sdk/go 0.4.1 2.253.0 1.0.0 github.com/speakeasy-sdks/test-workspace-sample-sdk",
 		},
 	}
 	for _, opt := range opts {
