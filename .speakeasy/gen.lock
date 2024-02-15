@@ -4,16 +4,16 @@ management:
   docChecksum: dfbfac1cfd99bb11028a16f746df2a96
   docVersion: 1.0.0
   speakeasyVersion: internal
-  generationVersion: 2.253.0
-  releaseVersion: 0.4.1
-  configChecksum: ec152aeda763fd76f25e1f0d06aed7cd
+  generationVersion: 2.258.2
+  releaseVersion: 0.5.0
+  configChecksum: bff2043eb027656440e15cd6911b12e2
   repoURL: https://github.com/speakeasy-sdks/test-workspace-sample-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/test-workspace-sample-sdk
   published: true
 features:
   go:
-    core: 3.3.2
+    core: 3.4.0
     globalServerURLs: 2.82.1
 generatedFiles:
   - whitelabelewallet.go
@@ -114,3 +114,4 @@ generatedFiles:
   - docs/sdks/whitelabelewallet/README.md
   - USAGE.md
   - .gitattributes
+  - internal/hooks/hooks.go
