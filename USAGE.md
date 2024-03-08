@@ -7,7 +7,6 @@ import (
 	testworkspacesamplesdk "github.com/speakeasy-sdks/test-workspace-sample-sdk"
 	"github.com/speakeasy-sdks/test-workspace-sample-sdk/pkg/models/operations"
 	"log"
-	"net/http"
 )
 
 func main() {
@@ -24,8 +23,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	if res.StatusCode == http.StatusOK {
+	if res != nil {
 		// handle response
 	}
 }
