@@ -237,9 +237,9 @@ func New(opts ...SDKOption) *WhitelabelEWallet {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0.0",
-			SDKVersion:        "0.6.0",
-			GenVersion:        "2.279.1",
-			UserAgent:         "speakeasy-sdk/go 0.6.0 2.279.1 1.0.0 github.com/speakeasy-sdks/test-workspace-sample-sdk",
+			SDKVersion:        "0.6.1",
+			GenVersion:        "2.280.6",
+			UserAgent:         "speakeasy-sdk/go 0.6.1 2.280.6 1.0.0 github.com/speakeasy-sdks/test-workspace-sample-sdk",
 			Hooks:             hooks.New(),
 		},
 	}
