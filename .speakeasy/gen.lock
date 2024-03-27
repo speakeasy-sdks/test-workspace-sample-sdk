@@ -3,17 +3,17 @@ id: 2cb274b7-fcbd-4d49-95f2-567e732ebaec
 management:
   docChecksum: dfbfac1cfd99bb11028a16f746df2a96
   docVersion: 1.0.0
-  speakeasyVersion: 1.207.1
-  generationVersion: 2.280.6
-  releaseVersion: 0.6.1
-  configChecksum: 8f6d7aa9766be7c3e417d09d6baf5a1c
+  speakeasyVersion: 1.227.0
+  generationVersion: 2.291.0
+  releaseVersion: 0.6.2
+  configChecksum: 6734cf0935e86ee7a615e549f8714213
   repoURL: https://github.com/speakeasy-sdks/test-workspace-sample-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/test-workspace-sample-sdk
   published: true
 features:
   go:
-    core: 3.4.4
+    core: 3.4.5
     globalServerURLs: 2.82.2
     responseFormat: 0.1.0
 generatedFiles:
